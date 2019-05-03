@@ -1,0 +1,64 @@
+Exercises
+
+1.SELECT * FROM generic WHERE id=1;
+
+2.Silly Fannies Wiggle
+
+3.  a.SELECT (name, gender, age) FROM dogs WHERE breed = 'labrador';
+	b.SELECT id FROM dogs WHERE age < 1;
+	c.SELECT (name, age) FROM dogs WHERE gender = 'F' AND weight > 35;
+	d.SELECT * FROM dogs WHERE breed NOT LIKE '%shepherd%';
+	e.SELECT (id, age, weight, breed) FROM dogs WHERE weight >60 OR breed = 'great dane';
+
+4. a.   name   | adoption_date
+	 ----------+---------------
+	  Mushi    | 2016-03-22
+	  Seashell |
+	  Azul     | 2016-04-17
+	  Victoire | 2016-09-01
+	  Nala     |
+	  
+	b.   name   | age
+	  ----------+-----
+	   Mushi    |   1
+	   Seashell |   7
+	   Azul     |   3
+	   Victoire |   7
+	   Nala     |   1
+	   
+5. a.SELECT * FROM cats WHERE adoption_date IS NULL;
+   b.SELECT name, gender FROM cats WHERE age = 7;
+   c.SELECT name FROM cats;
+   
+6. a. = equal to for example if you needed to check if a date is equal to a specific date, 
+	  != not equal to as in if you need to check if an age is not equal to a certain age, 
+	  > greater than as in if you need to check if a height is greater then a certain height, 
+	  < less than as in if you need to check if a millage is less then a certain distance, 
+	  <> greater than or less than for if you need to check if a bank account is greater or less than an amount, 
+	  <= less than or equal too for when you need to check if a food stock is greater or equal to a certain amount, 
+	  >= greater than or equal too for when you need to check if an chemical level is greater than or equal too a certain amount in a pool, 
+	  LIKE like includes the given information in its search for when you need to find a book including the word "the" in its title,  
+	  BEWEEN for when you need to check if a price is between two margins, 
+	  IS DISTINCT FROM for when you need to check if a date is greater or equal to certain a certain date if one of the dates might be NULL, 
+	  IS TRUE/IS FALSE for when you need to check if a bus is or is not in the terminal, 
+	  IS NULL for when you need to check to see if a pets adoption date if they havent been adopted, 
+	  AND for when you need to compare to comparing statements like when you need to check for the oldest product on the shelf that is also an apple, 
+	  OR for when you need to check if a car is in stock or if it is red, 
+	  NOT for when you need to check if something is not in stock. 
+
+7.  a.   name
+	 ----------
+	 Seashell
+	 Nala
+	
+	b.    name
+	  ----------
+	  Mushi
+	  Seashell
+	  Victoire
+	  Nala
+	
+	c. id
+	  ----
+	  3
+	  4
