@@ -31,5 +31,5 @@ Exercises
 	d.SELECT cats.name FROM cats LEFT JOIN cat_adoptions ON cats.id = cat_adoptions.cat_id WHERE cat_adoptions.cat_id IS NULL UNION SELECT dogs.name FROM dogs LEFT JOIN dog_adoptions ON dogs.id = dog_adoptions.dog_id WHERE dog_adoptions.dog_id IS NULL;
 	e.SELECT adopters.first_name FROM adopters JOIN dog_adoptions ON adopters.id = dog_adoptions.adopter_id;
 	
-9.  a. SELECT patrons.name, holds.rank, books.title FROM patrons JOIN holds ON holds.patron_id = patrons.id JOIN books ON holds.isbn = books.isbn ORDER BY rank ASC;
-	b.SELECT patrons.name, holds.rank, books.title FROM patrons LEFT OUTER JOIN holds ON patrons.id = holds.patron_id LEFT OUTER JOIN books ON holds.isbn = books.isbn;
+9.  	a. SELECT patrons.name, holds.rank, books.title FROM patrons JOIN holds ON holds.patron_id = patrons.id JOIN books ON holds.isbn = books.isbn ORDER BY rank ASC;
+	b.SELECT patrons.name, books.title FROM patrons, transactions LEFT OUTER JOIN books ON books.isbn = transactions.isbn WHERE patrons.id = transactions.patron_id;
