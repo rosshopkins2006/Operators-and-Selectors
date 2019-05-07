@@ -1,0 +1,35 @@
+Exercises
+
+1.You use the JOIN method of sql
+
+2.inner join will display the rows that satisfy the condition and leave out any null values.
+	for example if you wanted to display all the customers with a membership who also purchased an upgraded membership.
+	left outer join will display all the rows on the left satisfying the conditions including null values
+	For example if you wanted to display all the members who purchased a membership where the left column of upgraded memberships
+	include even those customers who didnt upgrade.
+	right outer join will display all the rows on the right satisfying the condintions including null values. 
+	for example if you wanted to display all the memebers current and past who did not purchase an upgraded membership but you also wanted to 
+	display on the left only upgraded memberships
+	
+3. The primary key is the identifying data that signifies which rows will be selected from the table that the second table 
+	will be compared too where as the foreign key is the identifying data that signifies which rows of the second table that will be selected. 
+	for example to continue our membership analogy the primary key would be the members current and the foriegn key would be the upgraded memberships. 
+
+4. Aliasing is when you simplify the input data in a SELECT statement abriviating the tables in the statement. 
+
+5. SELECT p.name, c.salary, c.vacation_days FROM professor AS  p JOIN compensation AS c ON p.id = c.professor_id;
+
+6. You would use natural join when you need all the shared columns of both tables. For example to continue
+	our analogy of the memberships if you wanted to display members columns name and membership status which is 
+	in both tables. 
+
+7.SELECT employees.name, shifts.date FROM employees JOIN shifts ON employees.id = shifts.id;
+
+8.	a.SELECT volunteers.first_name, volunteers.last_name, dogs.name FROM volunteers LEFT OUTER JOIN dogs ON volunteers.foster_dog_id = dogs.id;
+	b.SELECT cats.name, cat_adoptions.date, adopters.first_name FROM cats LEFT OUTER JOIN adopters ON adopters.id = cats.id LEFT OUTER JOIN cat_adoptions ON cat_adoptions.cat_id = cats.id;
+	c.SELECT adopters.first_name FROM adopters LEFT JOIN dog_adoptions ON adopters.id = dog_adoptions.adopter_id WHERE dog_adoptions.adopter_id IS NULL;
+	d.SELECT cats.name FROM cats LEFT JOIN cat_adoptions ON cats.id = cat_adoptions.cat_id WHERE cat_adoptions.cat_id IS NULL UNION SELECT dogs.name FROM dogs LEFT JOIN dog_adoptions ON dogs.id = dog_adoptions.dog_id WHERE dog_adoptions.dog_id IS NULL;
+	e.SELECT adopters.first_name FROM adopters JOIN dog_adoptions ON adopters.id = dog_adoptions.adopter_id;
+	
+9.  a. SELECT patrons.name, holds.rank, books.title FROM patrons JOIN holds ON holds.patron_id = patrons.id JOIN books ON holds.isbn = books.isbn ORDER BY rank ASC;
+	b.SELECT patrons.name, holds.rank, books.title FROM patrons LEFT OUTER JOIN holds ON patrons.id = holds.patron_id LEFT OUTER JOIN books ON holds.isbn = books.isbn;
